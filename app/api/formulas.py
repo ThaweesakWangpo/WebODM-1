@@ -11,6 +11,12 @@ algos = {
         'expr': '(N - R) / (N + R)',
         'help': _('Normalized Difference Vegetation Index shows the amount of green vegetation.')
     },
+    'NCON': {
+        'expr': ' 4.3351 * ((G - R)/(G + R)) - 0.2158',
+        'help': _('Nitrogen Map Equation N-Concentration.'),
+        'range': (-0.3, 0.3)
+
+    },
     'NDVI (Blue)': {
         'expr': '(N - B) / (N + B)',
         'help': _('Normalized Difference Vegetation Index shows the amount of green vegetation.')

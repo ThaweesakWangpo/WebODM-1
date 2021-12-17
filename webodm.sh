@@ -196,6 +196,9 @@ run(){
 }
 
 start(){
+	export WO_DEBUG=YES
+    export WO_DEV=YES
+    dev_mode=true
     if [[ $dev_mode = true ]]; then
 	    echo "Starting WebODM in development mode..."
         down
