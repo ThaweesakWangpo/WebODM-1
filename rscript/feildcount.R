@@ -6,7 +6,7 @@ image <- stack("odm_orthophoto.tif")
 plotRGB(image, r = 1, g = 2, b = 3)
 
 #Removing soil out.
-image.RemSoil <- fieldMask(mosaic = image.Rotated, Red = 1, Green = 2, Blue = 3, index = "HUE")
+image.RemSoil <- fieldMask(mosaic = image, Red = 1, Green = 2, Blue = 3, index = "HUE")
 
 #Define grids of field.
 column <- as.integer(readline("How many number of column? : "))

@@ -25,6 +25,10 @@ print('accuracy train:',RandomForestRegModel.score(x_train,y_train))
 yp=RandomForestRegModel.predict(x_test)
 print('accuracy test:',RandomForestRegModel.score(x_test,y_test))
 
+#y test
+y_pred = RandomForestRegModel.predict(x_test)
+y_pred
+
 #Upload and read plant height file for predict
 ph = pd.read_csv("MSH1x1m.csv")
 ph
@@ -32,6 +36,7 @@ ph
 #Reshape plant height file
 data = ph.MSH.values.reshape(-1, 1)
 data
+
 
 #Predict plant height by  RandomForestRegModel
 pd = RandomForestRegModel.predict(data)
@@ -52,6 +57,10 @@ rmse
 # R-square
 r = r2_score(y_test, y_pred)
 r
+
+#select x and y axis by column
+X = df.iloc[:,0].values
+y = df.iloc[:,1].values
 
 # Create graph
 X_grid = np.arange(min(X),max(X),0.01)
