@@ -40,13 +40,12 @@ data
 
 #Predict plant height by  RandomForestRegModel
 pd = RandomForestRegModel.predict(data)
-output  = pd.reshape(-1,1)
-output
+
 
 #Write weight file 
 with open('Weight.csv', mode='w') as weight_file:
   writer = csv.writer(weight_file, delimiter=',')
-  for row in output:
+  for row in pd:
     writer.writerow([row])
 
 # Root mean square error
